@@ -1,2 +1,2 @@
-all:
-	@echo "Nothing yet :)"
+lint:
+	@python3 lint.py
