@@ -1,0 +1,44 @@
+\section{Statement} % @statement
+
+If $f(x) = 0$ for all irrational $x$, $f(x) = 1$ for all rational $x$, prove that $f\not\in\mathscr{R}$ on $[a,b]$ for any $a < b$.
+
+\section{Solution}
+
+I will show that the lower and upper integrals are not the same on $[a,b]$, which implies $f\not\in\mathscr{R}$.
+On any interval $[x_{i-1},x_i]\subset[a,b]$ there exists both a rational number and an irrational number in $[x_{i-1},x_i]$.
+(This follows because the rationals and irrationals are dense in the reals.)
+Therefore on any interval $[x_{i-1},x_i]$, $f$ takes the values of both $0$ and $1$.
+It follows that for any $1\leq i\leq n$, $M_i = 1$ and $m_i = 0$.
+Therefore, for the upper sum $U(P,f)$:
+
+\begin{align}
+  & U(P,f) = \sum_{i=1}^{n}M_i \Delta x_i \\
+  \imply & U(P,f) = \sum_{i=1}^{n} \Delta x_i \\
+  \iff & U(P,f) = \sum_{i=1}^{n} (x_i - x_{i-1}) \\
+  \iff & U(P,f) = x_n - x_0 \\
+  \imply & U(P,f) = b - a \\
+\end{align}
+
+And for the lower sum $L(P,f)$:
+
+\begin{align}
+  & L(P,f) = \sum_{i=1}^{N} M_i \Delta x_i \\
+  \imply & L(P,f) = 0
+\end{align}
+
+Because this holds for any partition $P$ we know that:
+
+$$
+\inf U(P,f) = b - a
+$$
+
+and that:
+
+$$
+\sup L(P,f) = 0
+$$
+
+So for any interval $[a,b]$ (where $b\neq 0$), we know that the lower and upper integrals are not equal.
+Therefore $f\not\in\mathscr{R}$.
+
+% @qed
